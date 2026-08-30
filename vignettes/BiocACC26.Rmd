@@ -19,20 +19,59 @@ output:
 
 Vignette content is from commit `r system("git rev-parse --short HEAD", intern = TRUE)`.
 
+# Review
+
+## What is Bioconductor?
+
+Largest genomics software ecosystem, 25 years old
+
+![usage map](./usagemap.jpg)
+
+### Sentiments from NIH renewal review: 
+
+- Bioconductor is an essential infrastructure for the genomic data analysis enterprise
+- It has consistently provided the most robust, well-maintained, and state-of-the-art
+genomic data analysis software 
+- By providing rigorously reviewed, interoperable software built on standardized frameworks, Bioconductor
+addresses the critical need for reproducible genomic analysis
+- The amount of coordination and integration Bioconductor has with other resources is
+impressive ... embedded within AnVIL, connected with 19 other U24 projects, and
+interoperable with external ecosystems such as Galaxy and Seurat ...
+
+### 2200+ packages in ecosystem; 95 new ones in review
+
+![new submissions](./newsub.jpg)
+
+### New visibility, QA, and distribution processes coming soon
+
 ## New directions provoked by AnVIL
 
 ### Instant advanced compute
 
 ![cloudenv](./cloudenv26.jpg)
 
+### Instant ecosystem components
+
+Container-based AnVIL cloud environments are used to pre-compile all packages.
+BiocManager identifies the requesting environment and ships appropriate binary.
+Per-session compilation is not needed.
+
+![contbinaries](./instantBioc.jpg)
+
 ## The 'basic stack' of methods
 
-```{r ch1}
+```{r ch1,message=FALSE}
 library(AnVIL)
-ls(2)
+library(dplyr)
+library(DT)
+ls("package:AnVIL")
 ```
 
 
 ```{r ch2}
 avtables()
+```
+
+```{r ch3}
+avtable("anvil_files") |> as.data.frame() |> datatable()
 ```
