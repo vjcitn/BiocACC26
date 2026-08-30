@@ -68,14 +68,36 @@ Per-session compilation is not needed.
 library(AnVIL)
 library(dplyr)
 library(DT)
+library(ggplot2)
 ls("package:AnVIL")
 ```
 
+# Application to 1KG in PRIMED model
+
+## (Metadata) tables that were imported for ACC26
 
 ```{r ch2}
 avtables()
 ```
 
+## Searchable view of `anvil_file`; queries
+
 ```{r ch3}
 avtable("anvil_file") |> as.data.frame() |> datatable()
+```
+
+Recruitment source frequencies
+
+```{r chk4}
+ avtable("population_descriptor") |> select(`pfb:country_of_recruitment`) |>
+     mutate(country=`pfb:country_of_recruitment`) |> group_by(country) |> summarise(n=n()) |> 
+     ggplot(aes(x=country, y=n)) + geom_col() + theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+Ancestry frequencies
+ 
+```{r chk5}
+ avtable("population_descriptor") |> select(`pfb:population_label`) |>
+     mutate(pop=`pfb:population_label`) |> group_by(pop) |> summarise(n=n()) |> 
+     ggplot(aes(x=pop, y=n)) + geom_col() + theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
