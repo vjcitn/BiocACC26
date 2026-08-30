@@ -110,6 +110,6 @@ Ancestry frequencies
 
 ## Language-agnostic data and annotation services
 
-## Integration with LLMs -- see the AI workshop tomorrow
+## Integration with LLMs -- see the AI workshop 
 
 
