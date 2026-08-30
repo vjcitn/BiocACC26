@@ -17,7 +17,22 @@ output:
 
 # Introduction
 
+Vignette content is from commit `r system("git rev-parse --short HEAD", intern = TRUE)`.
+
+## New directions provoked by AnVIL
+
+### Instant advanced compute
+
+![cloudenv](./cloudenv26.jpg)
+
+## The 'basic stack' of methods
+
 ```{r ch1}
 library(AnVIL)
 ls(2)
+```
+
+
+```{r ch2}
+avtables()
 ```
