@@ -15,9 +15,11 @@ ui = fluidPage(
    helpText("1KG source vs ancestry"),
    selectInput("source", "country of recruitment", choices=sort(base$country))
    ),
-  tabsetPanel(
-   tabPanel("ancestry", verbatimTextOutput("anc")),
-   tabPanel("about", helpText("Demonstration app"))
+  mainPanel(
+   tabsetPanel(
+    tabPanel("ancestry", verbatimTextOutput("anc")),
+    tabPanel("about", helpText("Demonstration app"))
+   )
   )
  )
 )
