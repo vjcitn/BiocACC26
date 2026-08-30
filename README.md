@@ -1,2 +1,3 @@
-# BiocACC26
-package for ACC 2026 Symbiosis talk
+## BiocACC26 - a workspace for discussing Bioc/AnVIL symbiosis
+
+Start here.

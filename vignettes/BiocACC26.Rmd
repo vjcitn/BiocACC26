@@ -1,0 +1,23 @@
+---
+title: "BiocACC26: remarks on Bioc/AnVIL symbiosis"
+shorttitle: "outlier dytection methods"
+author: "Vincent J. Carey, stvjc at channing.harvard.edu"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{BiocACC26: remarks on Bioc/AnVIL symbiosis}
+  %\VignetteEncoding{UTF-8}
+output:
+  BiocStyle::html_document:
+    highlight: pygments
+    number_sections: yes
+    theme: united
+    toc: yes
+---
+
+# Introduction
+
+```{r ch1}
+library(AnVIL)
+ls(2)
+```
