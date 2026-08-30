@@ -11,6 +11,6 @@ base =  avtable("population_descriptor") |> select(`pfb:country_of_recruitment`,
 
 server = function(input, output) {
  output$anc = renderPrint({
-  table(base[which(country == input$source),"anc"])
+  table(base[which(base$country == input$source),"pop"])
  })
 }
