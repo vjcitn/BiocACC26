@@ -73,5 +73,5 @@ avtables()
 ```
 
 ```{r ch3}
-avtable("anvil_files") |> as.data.frame() |> datatable()
+avtable("anvil_file") |> as.data.frame() |> datatable()
 ```
