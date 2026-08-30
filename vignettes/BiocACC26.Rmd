@@ -101,3 +101,15 @@ Ancestry frequencies
      mutate(pop=`pfb:population_label`) |> group_by(pop) |> summarise(n=n()) |> 
      ggplot(aes(x=pop, y=n)) + geom_col() + theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
+
+# Aspects of symbiosis in the future
+
+## BiocJobs -- explicit formulations of workflow components in packages
+
+![jobsblog](./biocjobssnap.jpg)
+
+## Language-agnostic data and annotation services
+
+## Integration with LLMs -- see the AI workshop tomorrow
+
+
