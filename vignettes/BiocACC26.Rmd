@@ -19,6 +19,10 @@ output:
 
 Vignette content is from commit `r system("git rev-parse --short HEAD", intern = TRUE)`.
 
+The aim of this package is to provide content for a 10 minute talk at ACC 2026.
+
+A shiny app will also be demonstrated.
+
 # Review
 
 ## What is Bioconductor?
