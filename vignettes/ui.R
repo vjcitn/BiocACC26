@@ -13,7 +13,7 @@ ui = fluidPage(
  sidebarLayout(
   sidebarPanel(
    helpText("1KG source vs ancestry"),
-   selectInput("source", "country of recruitment", choices=sort(base$country), selected="USA")
+   selectInput("source", "country of recruitment", choices=sort(unique(base$country)), selected="USA")
    ),
   mainPanel(
    tabsetPanel(
