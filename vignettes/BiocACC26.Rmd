@@ -104,6 +104,8 @@ Ancestry frequencies
 
 # Aspects of symbiosis in the future
 
+## Monarch harmonization concepts -- all OBO ontologies programmatically available via ontoProc2
+
 ## BiocJobs -- explicit formulations of workflow components in packages
 
 ![jobsblog](./biocjobssnap.jpg)
